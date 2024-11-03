@@ -1,17 +1,19 @@
-# 使用 vm/ubuntu:18.04 作为基础镜像
-FROM vm/ubuntu:18.04 
+FROM vm/ubuntu:18.04
 
-# 更新包列表并安装 curl、sudo、bash、nano 和 wget
+# Install the latest version of Docker, as in the official Docker installation tutorial.
 RUN apt-get update && \
-    apt-get install -y curl sudo bash nano wget
+    apt-get install ca-certificates curl gnupg lsb-release && \
+    sudo mkdir -p /etc/apt/keyrings && \
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg && \
+    echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" |\
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
+    apt-get update && \
+    apt-get install docker-ce docker-ce-cli containerd.io
 
-# 拷贝 run.sh 文件到容器
-COPY run.sh /usr/local/bin/run.sh
+COPY . .
 
-# 赋予 run.sh 执行权限
-RUN chmod +x /usr/local/bin/run.sh
+RUN docker build -t image .
+RUN BACKGROUND docker run -d -p 80:3000 image
 
-# 暴露端口 3000
-EXPOSE WEBSITE http://localhost:3000
-
-RUN /usr/local/bin/run.sh
+EXPOSE WEBSITE http://localhost:80
