@@ -18,4 +18,4 @@ RUN chmod 755 package.json index.js run.sh /app &&\
   npm install
 
 
-CMD ["node", "index.js"]
+CMD ["node", "app.js"]
