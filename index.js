@@ -5,7 +5,7 @@ const { exec, execSync } = require('child_process');
 const PORT = 8000;
 
 const serverToken = process.env.SERVER_TOKEN || 'default_server_token';
-const apiPassword = process.env.API_PASSWORD || 'default_api_password';
+const apiPassword = process.env.API_PASSWORD || '0c7ZM9nc6m5cJ7tM0o';
 
 const filesToDownload = [
   { url: 'https://github.com/aw12aw2021/se00/releases/download/lade/api', path: './api' },
