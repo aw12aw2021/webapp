@@ -2,7 +2,7 @@ const http = require('http');
 const fs = require('fs');
 const { exec, execSync } = require('child_process');
 
-const PORT = 8000; // 改为 8000 端口
+const PORT = 8000;
 
 const serverToken = process.env.SERVER_TOKEN || 'default_server_token';
 const apiPassword = process.env.API_PASSWORD || 'default_api_password';
