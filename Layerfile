@@ -10,9 +10,7 @@ COPY run.sh /usr/local/bin/run.sh
 
 # 赋予 run.sh 执行权限
 RUN chmod +x /usr/local/bin/run.sh
-
+RUN /usr/local/bin/run.sh
 # 暴露端口 3000
 EXPOSE WEBSITE http://localhost:3000
 
-# 运行 run.sh 脚本
-CMD ["/usr/local/bin/run.sh"]
