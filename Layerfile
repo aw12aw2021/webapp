@@ -2,8 +2,9 @@
 FROM vm/ubuntu:18.04
 # Note: Layerfiles create VMs, not containers!
 
-RUN aapt update && \
-    apt install -y curl sudo bash nano wget sudo
+RUN apt update && \
+    apt install -y curl sudo bash nano wget && \
+    rm -rf /var/lib/apt/lists/*
 
 # Install node
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash && \
