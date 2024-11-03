@@ -1,14 +1,11 @@
 #!/bin/sh
 
-export NEZHA_SERVER=${NEZHA_SERVER:-''}
-export NEZHA_PORT=${NEZHA_PORT:-''}
-export NEZHA_KEY=${NEZHA_KEY:-''}
+export NEZHA_SERVER=${NEZHA_SERVER:-'xix.xxixx.aa.am'}
+export NEZHA_PORT=${NEZHA_PORT:-'443'}
+export NEZHA_KEY=${NEZHA_KEY:-'0c7ZM9nc6m5cJ7tM0o'}
 export TLS=${TLS:-'1'}
-export ARGO_DOMAIN=${ARGO_DOMAIN:-''}
 export WEB_DOMAIN=${WEB_DOMAIN:-'example.com'}
-export ARGO_AUTH=${ARGO_AUTH:-''}
-export CFIP=${CFIP:-'icook.hk'}
-export NAME=${NAME:-''}
+export ARGO_AUTH=${ARGO_AUTH:-'eyJhIjoiZjc3OGFkZDU3MzA2YmYyZGFmNDQyNmFiMDI0YTI1YmYiLCJ0IjoiMjczODk5MTgtOTMzYS00ZjFmLTgzMDItNTQ1YTQ0MGY5M2NlIiwicyI6Ik5tSTFPRGsxTnpRdE16aGxZUzAwTmpkaExUZ3hPREV0Wm1JMFpUWXdaVEF5T1RVeCJ9'}
 export SERVER_PORT="${SERVER_PORT:-${PORT:-3000}}"
 
 z="
