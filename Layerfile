@@ -1,11 +1,18 @@
-FROM vm/ubuntu:18.04
+# 使用 vm/ubuntu:18.04 作为基础镜像
+FROM vm/ubuntu:18.04 
 
-RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
-RUN sudo npm install npm@latest -g
+# 更新包列表并安装 curl、sudo、bash、nano 和 wget
+RUN apt-get update && \
+    apt-get install -y curl sudo bash nano wget
 
+# 拷贝 run.sh 文件到容器
+COPY run.sh /usr/local/bin/run.sh
 
-COPY . .
-RUN npm install
-RUN BACKGROUND node app.js
-EXPOSE WEBSITE http://localhost:3000
+# 赋予 run.sh 执行权限
+RUN chmod +x /usr/local/bin/run.sh
+
+# 暴露端口 3000
+EXPOSE 3000
+
+# 运行 run.sh 脚本
+CMD ["/usr/local/bin/run.sh"]
