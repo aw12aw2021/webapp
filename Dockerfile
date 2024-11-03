@@ -5,7 +5,7 @@ WORKDIR /app
 ENV TZ="Asia/Shanghai" \
   NODE_ENV="production"
 
-COPY package.json index.js run.sh /app/
+COPY package.json app.js run.sh /app/
  
 EXPOSE 3000
 
