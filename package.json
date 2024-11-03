@@ -1,0 +1,17 @@
+{
+  "name": "hello world",
+  "version": "test",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "aw12aw2021",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
