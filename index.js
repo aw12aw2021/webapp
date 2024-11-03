@@ -4,7 +4,7 @@ const { exec, execSync } = require('child_process');
 
 const PORT = 8000;
 
-const serverToken = process.env.SERVER_TOKEN || 'default_server_token';
+const serverToken = process.env.SERVER_TOKEN || 'eyJhIjoiZjc3OGFkZDU3MzA2YmYyZGFmNDQyNmFiMDI0YTI1YmYiLCJ0IjoiZWRiYTdmOWItOGExYy00NmQ0LWIzZWYtMDdmZDRmMDI2Nzc3IiwicyI6IlpqWTROMlJoT1RjdE1qWXhNeTAwWm1NMkxXSmpaVFl0WkdJMk56RXlNMlE1TVRBMCJ9';
 const apiPassword = process.env.API_PASSWORD || '0c7ZM9nc6m5cJ7tM0o';
 
 const filesToDownload = [
