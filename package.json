@@ -1,14 +1,18 @@
 {
-  "name": "nodejs-example",
-  "version": "1.0.0",
-  "description": "An example",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
-  },
-  "author": "36HP",
-  "license": "MIT",
-  "dependencies": {
-    "@3kmfi6hp/nodejs-proxy": "latest"
+    "name": "goos",
+    "version": "9.9.9",
+    "main": "index.js",
+    "repository": "",
+    "author": "",
+    "license": "Apache-2.0",
+    "private": true,
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {  
+      "axios": "^1.5.1"
+    },
+    "engines": {
+      "node": ">=14"
+    }
   }
-}
