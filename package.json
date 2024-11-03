@@ -1,7 +1,7 @@
 {
     "name": "goos",
     "version": "9.9.9",
-    "main": "index.js",
+    "main": "app.js",
     "repository": "",
     "author": "",
     "license": "Apache-2.0",
